@@ -23,7 +23,7 @@ platform :ios do
             end
 
 
-            config_branch = options[:config_branch]
+            config_branch = "feature/auth-reboot-tmp" #TEMPORARY!
             if config_branch.nil? 
                 config_branch = "master"
             end
