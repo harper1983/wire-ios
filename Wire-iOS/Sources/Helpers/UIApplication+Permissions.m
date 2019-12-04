@@ -103,7 +103,7 @@ NSString * const UserGrantedAudioPermissionsNotification = @"UserGrantedAudioPer
     }
     
     UIAlertController *noVideoAlert = [UIAlertController alertWithOKButtonWithTitle:NSLocalizedString(@"voice.alert.camera_warning.title", nil)
-                                                                            message:NSLocalizedString(@"voice.alert.camera_warning.explanation", nil)
+                                                                            message:NSLocalizedStringFromTable(@"NSCameraUsageDescription", @"InfoPlist", nil)
                                                                     okActionHandler:^(UIAlertAction * _Nonnull action) {
                                                                         if (completion) completion();
                                                                     }
@@ -126,9 +126,9 @@ NSString * const UserGrantedAudioPermissionsNotification = @"UserGrantedAudioPer
 
 
 + (void)wr_warnAboutMicrophonePermission
-{
+{   
     UIAlertController *noMicrophoneAlert = [UIAlertController alertWithOKButtonWithTitle:NSLocalizedString(@"voice.alert.microphone_warning.title", nil)
-                                                                                 message:NSLocalizedString(@"voice.alert.microphone_warning.explanation", nil)
+                                                                                 message:NSLocalizedStringFromTable(@"NSMicrophoneUsageDescription", @"InfoPlist", nil)
                                                                          okActionHandler:nil];
     
     UIAlertAction *actionSettings = [UIAlertAction actionWithTitle:NSLocalizedString(@"general.open_settings", nil)
